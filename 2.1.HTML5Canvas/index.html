@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo 2.1: Usando Canvas HTML5</title>
+        <link rel ="icon" type ="image/x-icon" href="./favicon.png">
+    </head>
+
+
+    <body>
+        <canvas id="GLCanvas" width="640" height="480">
+
+            Your browser does not support the HTML5 canvas.
+       
+        </canvas>
+
+        <!-- Scripts de JS -->
+        <script type="text/javascript">
+            "use strict";  
+
+
+            var canvas = document.getElementById("GLCanvas");
+
+            var gl = canvas.getContext("webgl") ||
+                canvas.getContext("experimental-webgl");
+
+            if (gl !== null) {
+                gl.clearColor(0.0, 0.8, 0.0, 1.0); 
+                gl.clear(gl.COLOR_BUFFER_BIT);      
+            }
+            document.write("<br><b>Área de dibujo WebGL!</b>");
+        </script>
+    </body>
+</html>
