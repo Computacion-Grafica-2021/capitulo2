@@ -16,7 +16,7 @@
      // gGL reference to the vertex positions for the square
  
  function initSquareBuffer() {
-     // First: define the vertices for a square
+     // First: definir el v[ertice del cuadrado]
      var verticesOfSquare = [
          0.5, 0.5, 0.0,
          -0.5, 0.5, 0.0,
