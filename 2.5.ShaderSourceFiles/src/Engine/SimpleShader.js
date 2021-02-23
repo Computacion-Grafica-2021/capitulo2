@@ -95,8 +95,8 @@ SimpleShader.prototype._loadAndCompileShader = function (filePath, shaderType) {
     try {
         xmlReq.send();
     } catch (error) {
-        alert("Failed to load shader: " + filePath + " [Hint: you cannot double click index.html to run this project. " +
-                "The index.html file must be loaded by a web-server.]");
+        alert("Failed to load shader: " + filePath + " [Hint: no puedes dar doble click al index.html. " +
+                "El index.html debe ser corrido en un servidor.]");
         return null;
     }
     shaderSource = xmlReq.responseText;
@@ -117,7 +117,7 @@ SimpleShader.prototype._loadAndCompileShader = function (filePath, shaderType) {
     // The log info is how shader compilation errors are typically displayed.
     // This is useful for debugging the shaders.
     if (!gl.getShaderParameter(compiledShader, gl.COMPILE_STATUS)) {
-        alert("A shader compiling error occurred: " + gl.getShaderInfoLog(compiledShader));
+        alert("Ha ocurrido un error al cargar la sombra: " + gl.getShaderInfoLog(compiledShader));
     }
 
     return compiledShader;
